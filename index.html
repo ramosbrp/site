@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramos Dev</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./assets/favicon_io/favicon.ico">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <!-- Meta Tags Básicas -->
+    <meta name="keywords"
+        content="ramos-dev, bruno ramos, bruno ramos dev, bruno site, bruno ramos site, bruno ramos website, pagina de bruno ramos, pagina de bruno ramos, bruno portfolio, bruno ramos portfolio" />
+    <meta property="og:title" content="Ramos Dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ramos-dev.com" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Procurando" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" src="./images/logo.png" alt="">
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#/">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="./pages/error.html" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="voltar-ao-topo">
+        <a href="/">
+            <img src="./images/voltar-ao-topo.png" alt="">
+        </a>
+    </div>
+    <section id="about">
+        <img src="./images/me.jpeg" alt="Sua Foto" class="profile-pic">
+        <div id="bruno-ramos">
+            <h1 id="">Bruno Ramos</h1>
+            <p>
+                <span><b>Oi, eu sou o Bruno...</b></span>
+            </p>
+            <br>
+            <p>
+                Uma pessoa autodidata, que adora tecnologia. Atualmente estou fazendo engenharia da computação e análise
+                e
+                desenvolvimento de sistemas.
+
+
+            </p>
+            <p>
+                Minhas skills:
+            </p>
+        </div>
+        <div id="skills">
+
+            <div id="skills-icon">
+                <img src="./images/csharp.svg" alt="csharp">
+                <span>C#</span>
+            </div>
+            <div id="skills-icon">
+                <img src="./images/html.svg" alt="html">
+                <span>HTML</span>
+            </div>
+            <div id="skills-icon">
+                <img src="./images/css.svg" alt="javascript">
+                <span>CSS</span>
+            </div>
+            <div id="skills-icon">
+                <img src="./images/javascript.svg" alt="javascript">
+                <span>javascript</span>
+            </div>
+
+            <div id="skills-icon">
+                <img src="./images/git.svg" alt="Git">
+                <span>Git</span>
+            </div>
+
+        </div>
+    </section>
+    <section id="projects">
+        <h1>Projetos</h1>
+        <div class="project-container">
+            <!-- Projeto 1 -->
+            <div class="project">
+                <img src="./images/jobsnet.png" alt="Projeto 1">
+                <h3>Cadastro de Currículos</h3>
+                <p>Página da JobsNet para cadastro de currículos de candidatos.</p>
+                <a href="https://tender-knuth-26c0b6.netlify.app/" target="_blank">Ver Projeto</a>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project">
+                <img src="images/urna.png" alt="Projeto 2">
+                <h3>Urna Eletrônica</h3>
+                <p>Urna Eletrônica feita em HTML, CSS e javascript</p>
+                <a href="https://app.netlify.com/sites/kind-sinoussi-5580d4/overview" target="_blank">Ver Projeto</a>
+            </div>
+
+            <div class="project">
+                <img src="images/minhapagina.png" alt="Projeto 2">
+                <h3>Um layout da minha página</h3>
+                <p>Uma página pessoalfeita em HTML, CSS e javascript</p>
+                <a href="https://ramos-dev.software/" target="_blank">Ver Projeto</a>
+            </div>
+
+        </div>
+        <!-- Informações de contato -->
+    </section>
+
+    <section id="contact">
+        <h1>Contato</h1>
+        <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
+        <form action="" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h3>Contato</h3>
+                <p><i class="fas fa-phone"></i> (21) 98914-0246</p>
+                <p><i class="fas fa-envelope"></i> bruno.rp45@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
+            </div>
+            <div class="footer-section social-media">
+                <a href="https://github.com/ramosbrp"><img src="./images/github-2.png" alt=""> GitHub</a>
+                <a href="mailto:contato@ramos-dev.com"><img src="./images/email-2.png" alt=""> Email</a>
+                <a href="https://wa.me/seunumero"><img src="./images/whatsapp-2.png" alt=""> WhatsApp</a>
+            </div>
+            <div class="footer-section map">
+                <!-- Incorporar mapa (use Google Maps ou similar) -->
+                <!-- Exemplo: <iframe src="URL_DO_MAPA" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Ramos Dev | Todos os Direitos Reservados</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> e um pouco de café!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

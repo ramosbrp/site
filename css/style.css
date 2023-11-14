@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    --azul-royal: #4169E1;
+    --cinza-claro: #D3D3D3;
+    --cinza-escuro: #696969;
+    --gray-blue: #A1B2CD;
+    --background: #F6FAFF;
+    --background-claro: #f9f9fc;
+    --background-escuro: #b3d4fc;
+
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    width: 100vw;
+}
+
+header{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+header img  {
+    width: 150px;
+}
+
+
+
+#navbar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+/**
+ * `@property` is required for the animation to work.
+ * Without it, the angle values won’t interpolate properly.
+ *
+ * @see https://dev.to/afif/we-can-finally-animate-css-gradient-kdk
+ */
+ @property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  
+  /**
+   * To animate the gradient, we set the custom property to 1 full
+   * rotation. The animation starts at the default value of `0deg`.
+   */
+  @keyframes spin {
+    to {
+      --bg-angle: 360deg;
+    }
+  }
+.profile-pic {
+    display: block;
+    margin: 0 auto;
+    border-radius: 60%;
+    max-width: 300px;
+    height: auto;
+    /* add the animation, but pause it by default */
+  animation: spin 2.5s infinite linear paused;
+  
+  /**
+   * Using `background-origin` we can create a “border” using two gradients. And to
+   * make the gradients better-looking, we use OKLCH.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
+   * @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+   */
+  background:
+    /* Background colors don’t work with `background-origin`, so use a gradient. */
+    linear-gradient(
+        to bottom,
+        oklch(0.1 0.2 240 / 0.95),
+        oklch(0.1 0.2 240 / 0.95)
+      )
+      padding-box, /* ends at inner border edges */
+    conic-gradient(
+        from var(--bg-angle) in oklch longer hue,
+        oklch(1 0.37 0) 0 0
+      )
+      border-box; /* extends to outer border edges */
+  
+  /* a clear border lets the background gradient shine through */
+  border: 6px solid transparent;
+
+  /* unpause the animation on hover */
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+#voltar-ao-topo{
+  position: fixed;
+  top: 45vw;
+  left: 92vw;
+}
+
+#about{
+  width: 100vw;
+  height: 70vw;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+  background-color: var(--background-claro);
+}
+
+
+#bruno-ramos{
+  padding: 50px;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+
+#about p{
+  font-size: 22px;
+}
+
+#about #skills{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#skills #skills-icon{
+  width: 250px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: var(--background-escuro);
+  border: 1px solid var(--azul-royal);
+  padding: 5px;
+}
+
+#skills #skills-icon img{
+  width: 80px;
+}
+
+#skills #skills-icon span{
+  font-size: 30px;
+}
+
+#projects{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 50px;
+  text-decoration: none;
+}
+
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.project {
+  margin: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 400px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+
+.project p {
+  text-align: left;
+}
+
+#contact {
+  background-color: #f2f2f2;
+  padding: 40px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#contact form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+#contact form input, 
+#contact form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Para garantir que padding não afete a largura total */
+  margin-bottom: 20px;
+}
+
+#contact form input[type="submit"] {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#contact form input[type="submit"]:hover {
+  background-color: #003d7a;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  text-decoration: none;
+}
+
+.social-media{
+  display: flex;
+  flex-flow: row;
+  width: 200px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #777;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+}
