@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+/* header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+} */
+
+.blog-list {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    margin-bottom: 30px;
+}
+
+.blog-post h2 {
+    color: #0056b3;
+}
+
+.post-date {
+    color: #666;
+    font-style: italic;
+}
+
+.read-more {
+    background-color: #0056b3;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #003d7a;
+}
+
+/* Adicione mais estilos conforme necessário */
+
+.blog-post-detailed {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-detailed h1 {
+    color: #0056b3;
+}
+
+.post-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.post-content p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Adicione mais estilos conforme necessário */
