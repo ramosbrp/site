@@ -1,58 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-html{
-    --azul-royal: #4169E1;
-    --cinza-claro: #D3D3D3;
-    --cinza-escuro: #696969;
-    --gray-blue: #A1B2CD;
-    --background: #F6FAFF;
-    --background-claro: #f9f9fc;
-    --background-escuro: #b3d4fc;
+html {
+  --azul-royal: #4169E1;
+  --cinza-claro: #D3D3D3;
+  --cinza-escuro: #696969;
+  --gray-blue: #A1B2CD;
+  --background: #F6FAFF;
+  --background-claro: #f9f9fc;
+  --background-escuro: #b3d4fc;
 
-
+  /* font-size: 62.5%; */
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-header{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-around;
+header {
+  height: 20vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
 }
-header img  {
-    width: 150px;
+
+header img {
+  max-width: 8vw;
+}
+
+header h2 {
+  font-size: clamp(14px, 1.6rem, 2vh);
 }
 
 
 
 #navbar ul {
-    list-style-type: none;
-    text-align: center;
+  list-style-type: none;
+  text-align: center;
 }
 
 #navbar ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
+  max-width: 14px;
 }
 
 #navbar ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+
+}
+
+#about,
+#contact,
+#projects {
+  height: 100vh;
 }
 
 /**
@@ -61,30 +83,31 @@ header img  {
  *
  * @see https://dev.to/afif/we-can-finally-animate-css-gradient-kdk
  */
- @property --bg-angle {
-    inherits: false;
-    initial-value: 0deg;
-    syntax: "<angle>";
-  }
-  
-  /**
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+/**
    * To animate the gradient, we set the custom property to 1 full
    * rotation. The animation starts at the default value of `0deg`.
    */
-  @keyframes spin {
-    to {
-      --bg-angle: 360deg;
-    }
+@keyframes spin {
+  to {
+    --bg-angle: 360deg;
   }
+}
+
 .profile-pic {
-    display: block;
-    margin: 0 auto;
-    border-radius: 60%;
-    max-width: 300px;
-    height: auto;
-    /* add the animation, but pause it by default */
+  display: block;
+  margin: 20px auto;
+  border-radius: 60%;
+  max-width: 300px;
+  height: auto;
+  /* add the animation, but pause it by default */
   animation: spin 2.5s infinite linear paused;
-  
+
   /**
    * Using `background-origin` we can create a “border” using two gradients. And to
    * make the gradients better-looking, we use OKLCH.
@@ -94,18 +117,14 @@ header img  {
    */
   background:
     /* Background colors don’t work with `background-origin`, so use a gradient. */
-    linear-gradient(
-        to bottom,
-        oklch(0.1 0.2 240 / 0.95),
-        oklch(0.1 0.2 240 / 0.95)
-      )
-      padding-box, /* ends at inner border edges */
-    conic-gradient(
-        from var(--bg-angle) in oklch longer hue,
-        oklch(1 0.37 0) 0 0
-      )
-      border-box; /* extends to outer border edges */
-  
+    linear-gradient(to bottom,
+      oklch(0.1 0.2 240 / 0.95),
+      oklch(0.1 0.2 240 / 0.95)) padding-box,
+    /* ends at inner border edges */
+    conic-gradient(from var(--bg-angle) in oklch longer hue,
+      oklch(1 0.37 0) 0 0) border-box;
+  /* extends to outer border edges */
+
   /* a clear border lets the background gradient shine through */
   border: 6px solid transparent;
 
@@ -115,27 +134,25 @@ header img  {
   }
 }
 
-#voltar-ao-topo{
+#voltar-ao-topo {
   position: fixed;
-  top: 45vw;
-  left: 92vw;
+  top: 92%;
+  left: 95%;
 }
 
-#about{
+#about {
   width: 100vw;
-  height: 70vw;
-  margin-top: 100px;
   display: flex;
   flex-flow: column;
   background-color: var(--background-claro);
 }
 
 
-#bruno-ramos{
+#bruno-ramos {
   padding: 50px;
 }
 
-h1{
+h1 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -144,11 +161,11 @@ h1{
 }
 
 
-#about p{
+#about p {
   font-size: 22px;
 }
 
-#about #skills{
+#about #skills {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -156,7 +173,7 @@ h1{
   margin-top: 30px;
 }
 
-#skills #skills-icon{
+#skills #skills-icon {
   width: 250px;
   display: flex;
   flex-flow: row;
@@ -166,15 +183,16 @@ h1{
   padding: 5px;
 }
 
-#skills #skills-icon img{
+#skills #skills-icon img {
   width: 80px;
 }
 
-#skills #skills-icon span{
+#skills #skills-icon span {
   font-size: 30px;
 }
 
-#projects{
+#projects {
+
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 50px;
@@ -184,14 +202,13 @@ h1{
 
 .project-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 
 }
 
 .project {
   margin: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
   width: 400px;
 }
@@ -222,7 +239,7 @@ h1{
 }
 
 #contact form {
-  max-width: 500px;
+  width: 70vw;
   margin: auto;
   background: white;
   padding: 20px;
@@ -238,13 +255,14 @@ h1{
   color: #555;
 }
 
-#contact form input, 
+#contact form input,
 #contact form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* Para garantir que padding não afete a largura total */
+  box-sizing: border-box;
+  /* Para garantir que padding não afete a largura total */
   margin-bottom: 20px;
 }
 
@@ -285,7 +303,8 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-section p, .footer-section a {
+.footer-section p,
+.footer-section a {
   color: #bbb;
   line-height: 1.6;
 }
@@ -293,12 +312,17 @@ footer {
 .footer-section a {
   display: block;
   text-decoration: none;
+  
 }
 
-.social-media{
+.social-media {
   display: flex;
   flex-flow: row;
-  width: 200px;
+  width: 300px;
+}
+
+.social-media a img {
+  width: 3rem;
 }
 
 .footer-bottom {
@@ -309,6 +333,61 @@ footer {
 
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  #navbar ul li a {
+    font-size: 12px;
+  }
+
+  #voltar-ao-topo {
+    top: 88%;
+    left: 83%;
+  }
+
+  #voltar-ao-topo img {
+    width: 70%;
+  }
+
+  #about {
+    height: auto;
+  }
+
+  #about .profile-pic {
+    width: 50vw;
+  }
+
+  #about #skills {
+    flex-wrap: wrap;
+  }
+
+  #about #skills-icon {
+    max-width: 200px;
+  }
+
+  #about #skills-icon img {
+    max-width: 50px;
+  }
+
+  footer {
+    /* max-height: 30vh; */
+  }
+
+  footer .footer-content {
+    display: flex;
+    flex-flow: row;
+  }
+
+  footer .social-media{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    max-width: 15vw;
+  }
+
+  footer img {
+    max-width: 5vw;
   }
 }

@@ -26,9 +26,14 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div>
-            <img id="logo" src="./images/logo.png" alt="">
+            <a href="/">
+                <img id="logo" src="./images/logo.png" alt="">
+            </a>
+            <div>
+                <h2>Ramos Dev</h2>
+            </div>
         </div>
         <nav id="navbar">
             <ul>
@@ -36,116 +41,137 @@
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li><a href="#projects">Projetos</a></li>
-                <li><a href="./pages/error.html" target="_blank">Blog</a></li>
+                <li><a href="./blog/index.html" target="_blank">Blog</a></li>
             </ul>
         </nav>
     </header>
     <div id="voltar-ao-topo">
-        <a href="/">
+        <a href="#header">
             <img src="./images/voltar-ao-topo.png" alt="">
         </a>
     </div>
-    <section id="about">
-        <img src="./images/me.jpeg" alt="Sua Foto" class="profile-pic">
-        <div id="bruno-ramos">
-            <h1 id="">Bruno Ramos</h1>
-            <p>
-                <span><b>Oi, eu sou o Bruno...</b></span>
-            </p>
-            <br>
-            <p>
-                Uma pessoa autodidata, que adora tecnologia. Atualmente estou fazendo engenharia da computação e análise
-                e
-                desenvolvimento de sistemas.
+
+    <main>
+        <section id="about">
+            <img src="./images/me.jpeg" alt="Sua Foto" class="profile-pic">
+            <div id="bruno-ramos">
+                <h1 id="">Bruno Ramos</h1>
+                <p>
+                    <span><b>Oi, eu sou o Bruno...</b></span>
+                </p>
+                <br>
+                <p>
+                    Uma pessoa autodidata, que adora tecnologia. Atualmente estou fazendo engenharia da computação e
+                    análise
+                    e
+                    desenvolvimento de sistemas.
 
 
-            </p>
-            <p>
-                Minhas skills:
-            </p>
-        </div>
-        <div id="skills">
-
-            <div id="skills-icon">
-                <img src="./images/csharp.svg" alt="csharp">
-                <span>C#</span>
+                </p>
+                <p>
+                    Minhas skills:
+                </p>
             </div>
-            <div id="skills-icon">
-                <img src="./images/html.svg" alt="html">
-                <span>HTML</span>
-            </div>
-            <div id="skills-icon">
-                <img src="./images/css.svg" alt="javascript">
-                <span>CSS</span>
-            </div>
-            <div id="skills-icon">
-                <img src="./images/javascript.svg" alt="javascript">
-                <span>javascript</span>
-            </div>
+            <div id="skills">
 
-            <div id="skills-icon">
-                <img src="./images/git.svg" alt="Git">
-                <span>Git</span>
+                <div id="skills-icon">
+                    <img src="./images/csharp.svg" alt="csharp">
+                    <span>C#</span>
+                </div>
+                <div id="skills-icon">
+                    <img src="./images/html.svg" alt="html">
+                    <span>HTML</span>
+                </div>
+                <div id="skills-icon">
+                    <img src="./images/css.svg" alt="css">
+                    <span>CSS</span>
+                </div>
+                <div id="skills-icon">
+                    <img src="./images/javascript.svg" alt="javascript">
+                    <span>javascript</span>
+                </div>
+
+                <div id="skills-icon">
+                    <img src="./images/git.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+
             </div>
+        </section>
+        <section id="projects">
+            <h1>Projetos</h1>
+            <div class="project-container">
+                <!-- Projeto 1 -->
+                <div class="project">
+                    <img src="./images/jobsnet.png" alt="Projeto 1">
+                    <h3>Cadastro de Currículos</h3>
+                    <p>Página da JobsNet para cadastro de currículos de candidatos.</p>
+                    <a href="https://tender-knuth-26c0b6.netlify.app/" target="_blank">Ver Projeto</a>
+                </div>
 
-        </div>
-    </section>
-    <section id="projects">
-        <h1>Projetos</h1>
-        <div class="project-container">
-            <!-- Projeto 1 -->
-            <div class="project">
-                <img src="./images/jobsnet.png" alt="Projeto 1">
-                <h3>Cadastro de Currículos</h3>
-                <p>Página da JobsNet para cadastro de currículos de candidatos.</p>
-                <a href="https://tender-knuth-26c0b6.netlify.app/" target="_blank">Ver Projeto</a>
+                <!-- Projeto 2 -->
+                <div class="project">
+                    <img src="images/urna.png" alt="Projeto 2">
+                    <h3>Urna Eletrônica</h3>
+                    <p>Urna Eletrônica feita em HTML, CSS e javascript</p>
+                    <a href="https://app.netlify.com/sites/kind-sinoussi-5580d4/overview" target="_blank">Ver
+                        Projeto</a>
+                </div>
+
+                <div class="project">
+                    <img src="images/minhapagina.png" alt="Projeto 2">
+                    <h3>Um layout da minha página</h3>
+                    <p>Uma página pessoalfeita em HTML, CSS e javascript</p>
+                    <a href="https://ramos-dev.software/" target="_blank">Ver Projeto</a>
+                </div>
+
+                <div class="project">
+                    <img src="images/blog_01.png
+                    " alt="Projeto 3">
+                    <h3>Blog</h3>
+                    <p>Um laoyt de um blog</p>
+                    <a href="https://objective-bose-9ba7da.netlify.app/" target="_blank">Ver Projeto</a>
+                </div>
+
+                
+                <div class="project">
+                    <img src="images/Site_I2tech.png" alt="Projeto 3">
+                    <h3>Site I2Tech</h3>
+                    <p>Site para I2Tech</p>
+                    <a href="https://agitated-mcclintock-0c01e5.netlify.app/" target="_blank">Ver Projeto</a>
+                </div>
+
             </div>
+            <!-- Informações de contato -->
+        </section>
 
-            <!-- Projeto 2 -->
-            <div class="project">
-                <img src="images/urna.png" alt="Projeto 2">
-                <h3>Urna Eletrônica</h3>
-                <p>Urna Eletrônica feita em HTML, CSS e javascript</p>
-                <a href="https://app.netlify.com/sites/kind-sinoussi-5580d4/overview" target="_blank">Ver Projeto</a>
-            </div>
-
-            <div class="project">
-                <img src="images/minhapagina.png" alt="Projeto 2">
-                <h3>Um layout da minha página</h3>
-                <p>Uma página pessoalfeita em HTML, CSS e javascript</p>
-                <a href="https://ramos-dev.software/" target="_blank">Ver Projeto</a>
-            </div>
-
-        </div>
-        <!-- Informações de contato -->
-    </section>
-
-    <section id="contact">
-        <h1>Contato</h1>
-        <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
-        <form action="" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
+        <section id="contact">
+            <h1>Contato</h1>
+            <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
+            <form action="" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section contact-info">
                 <h3>Contato</h3>
                 <p><i class="fas fa-phone"></i> (21) 98914-0246</p>
-                <p><i class="fas fa-envelope"></i> bruno.rp45@gmail.com</p>
+                <p><i class="fas fa-envelope"></i>contato@ramos-dev.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
             </div>
             <div class="footer-section social-media">
                 <a href="https://github.com/ramosbrp"><img src="./images/github-2.png" alt=""> GitHub</a>
-                <a href="mailto:contato@ramos-dev.com"><img src="./images/email-2.png" alt=""> Email</a>
-                <a href="https://wa.me/seunumero"><img src="./images/whatsapp-2.png" alt=""> WhatsApp</a>
+                <a href="https://wa.me/+5521989140246"><img src="./images/whatsapp-2.png" alt=""> WhatsApp</a>
+                <a href="https://www.linkedin.com/in/ramos-bruno/"><img src="./images/linkedin.png" alt=""> Linkedin</a>
             </div>
             <div class="footer-section map">
                 <!-- Incorporar mapa (use Google Maps ou similar) -->
@@ -158,7 +184,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
