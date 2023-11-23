@@ -7,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
         message: document.getElementById('mensagem').value
     }
 
-    fetch('http://127.0.0.1:3000/send-email', {
+    fetch('https://backend-site-98a38bb92184.herokuapp.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type' : 'application/json' },
         body: JSON.stringify(data)
