@@ -1,0 +1,39 @@
+Introdução:
+
+-Breve introdução sobre o que é .NET e sua importância no mundo da programação.
+-Objetivo do post: esclarecer a evolução da plataforma, as diferenças entre as versões e o que esperar no futuro.
+1. Os Primórdios do .NET
+
+-Origem do .NET Framework: lançamento e propósitos iniciais.
+-Características principais do .NET original.
+2. .NET Framework Evolução e Versões
+
+Principais melhorias e adições em cada versão do .NET Framework.
+Exemplos de como essas mudanças impactaram o desenvolvimento de software.
+3. A Transição para .NET Core
+
+Introdução do .NET Core: motivações para um novo framework.
+Diferenças chave entre .NET Framework e .NET Core.
+Benefícios do .NET Core, como performance aprimorada e cross-platform capabilities.
+4. ASP.NET e MVC
+
+Explique o que é ASP.NET e sua relação com o .NET Framework.
+Introdução ao ASP.NET MVC 5: recursos e benefícios.
+5. O Nascimento do .NET 5 e Além
+
+A unificação do .NET Core e .NET Framework no .NET 5.
+Novidades e melhorias do .NET 5.
+A visão da Microsoft para o futuro do .NET.
+6. O Impacto no Desenvolvimento de Software
+
+Como as mudanças no .NET influenciaram o mercado de desenvolvimento.
+Discussão sobre a adoção de .NET em projetos modernos.
+7. Conclusão:
+
+Resumo das principais ideias.
+Perspectivas futuras para desenvolvedores .NET.
+Encorajamento para os leitores se aprofundarem mais no tema.
+8. Referências e Links Úteis:
+
+Links para documentação oficial da Microsoft.
+Recursos adicionais para aprendizado e atualização.
