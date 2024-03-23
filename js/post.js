@@ -6,7 +6,7 @@ document.getElementById('comment-form').addEventListener('submit', (e) => {
         comment: document.getElementById('comment').value
     }
 
-    fetch('http://127.0.0.1:3000/submit-comment', {
+    fetch('https://backend-site-98a38bb92184.herokuapp.com/submit-comment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
