@@ -67,7 +67,8 @@ body {
     margin-bottom: 5px;
 }
 
-#comment-form input, #comment-form textarea {
+#comment-form input,
+#comment-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -88,3 +89,68 @@ body {
     background-color: #003d7a;
 }
 
+/* Estilos para a seção de comentários */
+#container-comentarios {
+    margin: 20px;
+    padding: 10px;
+}
+
+.comentario {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente */
+}
+
+.avatar {
+    width: 60px;
+    /* Tamanho do avatar */
+    height: 60px;
+    /* Mantém a proporção do avatar como um círculo */
+    border-radius: 50%;
+    /* Torna a imagem do avatar circular */
+    margin-right: 20px;
+    /* Espaçamento entre o avatar e o texto */
+}
+
+.comentario h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+    /* Tamanho do nome da pessoa */
+}
+
+.comentario .data-comentario {
+    margin-left: 10px;
+    font-size: 0.9em;
+    /* Tamanho da data */
+    color: #666;
+    /* Cor da data */
+}
+
+.comentario p {
+    margin: 5px 0 0 80px;
+    /* Margem para alinhar o texto do comentário com o nome/data */
+    color: #444;
+    /* Cor do texto do comentário */
+    line-height: 1.4;
+    /* Espaçamento entre as linhas do texto do comentário */
+    flex-grow: 1;
+    /* Permite que o texto do comentário preencha o espaço restante */
+}
+
+#notificacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-size: 16px;
+}

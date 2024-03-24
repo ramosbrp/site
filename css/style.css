@@ -71,7 +71,6 @@ main {
 
 }
 
-#about,
 #contact,
 #projects {
   height: 100vh;
@@ -196,6 +195,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 50px;
+  margin-top: 200px;
   text-decoration: none;
 }
 
@@ -312,7 +312,7 @@ footer {
 .footer-section a {
   display: block;
   text-decoration: none;
-  
+
 }
 
 .social-media {
@@ -380,7 +380,7 @@ footer {
     flex-flow: row;
   }
 
-  footer .social-media{
+  footer .social-media {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -390,4 +390,18 @@ footer {
   footer img {
     max-width: 5vw;
   }
+}
+
+#notificacao {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 16px;
 }
