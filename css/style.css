@@ -156,7 +156,11 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+#bruno-ramos p {
+  text-align: center;
 }
 
 
@@ -164,7 +168,15 @@ h1 {
   font-size: 22px;
 }
 
-#about #skills {
+#skills {
+  margin-top: 50px;
+}
+
+#skills p {
+  text-align: center;
+}
+
+#about #skills div {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
