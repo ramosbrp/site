@@ -8,7 +8,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     }
 
     try {
-        const response = await fetch('https://backend-site-98a38bb92184.herokuapp.comsend-email', {
+        const response = await fetch('https://backend-site-98a38bb92184.herokuapp.com/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
