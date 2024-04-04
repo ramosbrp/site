@@ -30,8 +30,17 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
         document.getElementById('email').value = "";
         document.getElementById('mensagem').value = "";
 
-    } catch (error){
-            console.error('Error: ', error);
+    } catch (error) {
+        console.error('Error: ', error);
     }
-    
+
 })
+
+function toggleMenu() {
+    const menu = document.getElementById('navbar');
+    if (menu.classList.contains('expandido')) {
+        menu.classList.remove('expandido');
+    } else {
+        menu.classList.add('expandido');
+    }
+}

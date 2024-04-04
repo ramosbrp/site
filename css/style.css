@@ -65,6 +65,10 @@ header h2 {
   font-size: 20px;
 }
 
+.menu-hamburguer {
+    display: none;
+}
+
 main {
   display: flex;
   flex-flow: column;
@@ -354,6 +358,18 @@ footer {
   #navbar ul li a {
     font-size: 12px;
   }
+  .menu-hamburguer {
+    display: block;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #navbar.expandido {
+  display: block;
+  }
+  
 
   #voltar-ao-topo {
     top: 88%;
@@ -372,20 +388,17 @@ footer {
     width: 50vw;
   }
 
-  #about #skills {
-    flex-wrap: wrap;
+  #projects {
+    height: 100%;
   }
 
-  #about #skills-icon {
-    max-width: 200px;
+  .project-container {
+    display: flex;
+    flex-flow: column;
   }
 
-  #about #skills-icon img {
-    max-width: 50px;
-  }
-
-  footer {
-    /* max-height: 30vh; */
+  .project {
+    max-width: 300px;
   }
 
   footer .footer-content {
