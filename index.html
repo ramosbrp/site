@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -36,15 +36,16 @@
 
 <body>
     <header id="header">
-        <div>
+        <div id="container-profile">
             <a href="/">
-                <img id="logo" src="./images/logo.png" alt="">
+                <img src="./images/me.jpg" alt="Sua Foto" class="profile-pic">
+                <!-- <img id="logo" src="./images/logo.png" alt=""> -->
             </a>
             <div>
                 <h2>Ramos Dev</h2>
             </div>
         </div>
-        
+
         <!-- Ícone do Menu Hambúrguer -->
         <button class="menu-hamburguer" onclick="toggleMenu()">☰</button>
 
@@ -66,21 +67,28 @@
 
     <main>
         <section id="about">
-            <img src="./images/me.jpg" alt="Sua Foto" class="profile-pic">
+
             <div id="bruno-ramos">
-                <h1 id="">Bruno Ramos</h1>
                 <p>
-                    <span>Fullstack Developer</span>
+                    <h1>Olá!</h1>
                 </p>
                 <br>
-                <p>
-                    Apaixonado por Computação.</br>
-                    Programador Fullstack especializado em C#, JavaScript, AWS e Bancos de Dados.</br>
+                <em>
+                    <p>
+                        Estudo engenharia da computação e análise e desenvolvimento de sistemas e sou
+                        apaixonado por desenvolvimento em C# e JS.</br><br>
 
-                    Motivado em aprender e contribuir com projetos inovadores.
+                        Eu sou desenvolvedor full stack e estou com 3 anos de experiência e já atuei tanto no back-end
+                        como
+                        front-end, utilizando C#, JavaScript, jQuery, Angular, HTML/CSS, SQL Server, PostgreSQL. Já
+                        experimentei e
+                        tenho noções de tecnologias como: Python, PHP, React. Atualmente estou focado em banco de dados
+                        e
+                        tecnologias de nuvem como Azure.
 
+                    </p>
+                </em>
 
-                </p>
                 <br>
 
             </div>
@@ -115,25 +123,25 @@
 
             </div>
         </section>
+
         <section id="projects">
             <h1>Projetos</h1>
             <div class="project-container">
                 <!-- Projeto 1 -->
                 <div class="project">
-                    <img src="./images/jobsnet.png" alt="Projeto 1">
-                    <h3>Cadastro de Currículos</h3>
-                    <p>Página da JobsNet para cadastro de currículos de candidatos.</p>
-                    <a href="https://tender-knuth-26c0b6.netlify.app/" target="_blank">Ver Projeto</a>
+                    <img src="./images/SoftSkillsUp.jpg" alt="Projeto 1">
+                    <h3>Soft Skills Up</h3>
+                    <p>Plataforma de treinamento de soft skills.</p>
+                    <a href="https://softskillsup-app.azurewebsites.net" target="_blank">Ver Projeto</a>
                 </div>
 
-                <!-- Projeto 2 -->
                 <div class="project">
-                    <img src="images/urna.png" alt="Projeto 2">
-                    <h3>Urna Eletrônica</h3>
-                    <p>Urna Eletrônica feita em HTML, CSS e javascript</p>
-                    <a href="https://kind-sinoussi-5580d4.netlify.app/" target="_blank">Ver
-                        Projeto</a>
+                    <img src="images/MyUniversity2.jpg" alt="Projeto 2">
+                    <h3>My University App</h3>
+                    <p>Um sistema de gerenciamento de pessoas para faculdade</p>
+                    <a href="https://myuniversity-app.azurewebsites.net" target="_blank">Ver Projeto</a>
                 </div>
+
 
                 <div class="project">
                     <img src="images/quick-cloth.jpg" alt="Projeto 3">
@@ -172,27 +180,22 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h3>Contato</h3>
-                <p><i class="fas fa-phone"></i> (21) 98914-0246</p>
-                <p><i class="fas fa-envelope"></i>contato@ramos-dev.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-            </div>
-            <div class="footer-section social-media">
-                <a href="https://github.com/ramosbrp"><img src="./images/github-2.png" alt=""> GitHub</a>
-                <a href="https://wa.me/+5521989140246"><img src="./images/whatsapp-2.png" alt=""> WhatsApp</a>
-                <a href="https://www.linkedin.com/in/ramos-bruno/"><img src="./images/linkedin.png" alt=""> Linkedin</a>
-            </div>
-            <div class="footer-section map">
-                <!-- Incorporar mapa (use Google Maps ou similar) -->
-                <!-- Exemplo: <iframe src="URL_DO_MAPA" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-            </div>
-        </div>
-        <div class="footer-bottom">
+        <div class="footer-top">
             <p>&copy; 2023 Ramos Dev | Todos os Direitos Reservados</p>
             <p>Desenvolvido com &hearts; e um pouco de café!</p>
         </div>
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i>contato@ramos-dev.com</p>
+            </div>
+            <div class="footer-section social-media">
+                <a href="https://github.com/ramosbrp"><img src="./images/github-2.png" alt=""> </a>
+                <a href="https://wa.me/+5521989140246"><img src="./images/whatsapp-2.png" alt=""> </a>
+                <a href="https://www.linkedin.com/in/ramos-bruno/"><img src="./images/linkedin.png" alt=""></a>
+            </div>
+        </div>
+
     </footer>
 
     <div id="notificacao">E-mail enviado com sucesso!</div>
