@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+html[data-theme="light"] {
+    --background-color: #f9f9f9; /* Fundo geral da aplicação */
+    --header-background-color: #0f0f0f; /* Fundo do cabeçalho */
+    --header-text-color: #d8d8d8;
+}
+
+
 html {
   --azul-royal: #4169E1;
   --cinza-claro: #D3D3D3;
@@ -29,11 +36,20 @@ body {
 }
 
 header {
-  height: 20vh;
+  height: 64px;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-around;
+  background-color: var( --header-background-color);
+  color: var(--header-text-color);
+}
+
+#container-profile, #container-profile a{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 header img {
@@ -59,7 +75,7 @@ header h2 {
 
 #navbar ul li a {
   text-decoration: none;
-  color: black;
+  color: var(--header-text-color);
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -72,6 +88,8 @@ header h2 {
 main {
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -106,7 +124,7 @@ main {
   display: block;
   margin: 20px auto;
   border-radius: 60%;
-  max-width: 300px;
+  max-width: 60px;
   height: auto;
   /* add the animation, but pause it by default */
   animation: spin 2.5s infinite linear paused;
@@ -144,15 +162,16 @@ main {
 }
 
 #about {
-  width: 100vw;
+  width: 60vw;
   display: flex;
   flex-flow: column;
-  background-color: var(--background-claro);
+  /* background-color: var(--background-claro); */
 }
 
 
 #bruno-ramos {
   padding: 50px;
+  text-align: left;
 }
 
 h1 {
@@ -163,9 +182,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-#bruno-ramos p {
-  text-align: center;
-}
 
 
 #about p {
@@ -299,6 +315,9 @@ h1 {
 }
 
 footer {
+position:relative;
+  height: 200px;
+  bottom: 0;
   background-color: #333;
   color: #fff;
   text-align: center;
