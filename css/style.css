@@ -12,25 +12,19 @@ html[data-theme="light"] {
   --header-background-color: #0f0f0f;
   /* Fundo do cabeçalho */
   --header-text-color: #d8d8d8;
+  --laranja: #ff5b00;
+  --laranja-claro: #ff9700;
+  --cinza: #eee;
+
 }
 
 
-html {
-  --azul-royal: #4169E1;
-  --cinza-claro: #D3D3D3;
-  --cinza-escuro: #696969;
-  --gray-blue: #A1B2CD;
-  --background: #F6FAFF;
-  --background-claro: #f9f9fc;
-  --background-escuro: #b3d4fc;
 
-  /* font-size: 62.5%; */
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background-color: var(--background-color);
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -38,7 +32,7 @@ body {
 }
 
 header {
-width: 100vw;
+  width: 100vw;
   height: 64px;
   display: flex;
   flex-flow: row;
@@ -48,7 +42,7 @@ width: 100vw;
   color: var(--header-text-color);
 }
 
-#container-profile{
+#container-profile {
   width: 140px;
 }
 
@@ -66,31 +60,28 @@ width: 100vw;
 
 .profile-pic {
   border-radius: 60%;
-  max-width: 61px;
-  max-height: 61px;
+  max-width: 59px;
+  max-height: 59px;
   height: auto;
   /* add the animation, but pause it by default */
   animation: spin 2.5s infinite linear paused;
 
   /**
-   * Using `background-origin` we can create a “border” using two gradients. And to
-   * make the gradients better-looking, we use OKLCH.
-   *
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
    * @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
    */
   background:
-    /* Background colors don’t work with `background-origin`, so use a gradient. */
+    /* Background colors don’t work with background-origin, so use a gradient. */
     linear-gradient(to bottom,
-      oklch(0.1 0.2 240 / 0.95),
-      oklch(0.1 0.2 240 / 0.95)) padding-box,
+      oklch(55.64% 0.112 159.7 / 94%),
+      oklch(55.64% 0.112 159.7 / 94%)) padding-box,
     /* ends at inner border edges */
     conic-gradient(from var(--bg-angle) in oklch longer hue,
-      oklch(1 0.37 0) 0 0) border-box;
+      oklch(55.64% 0.112 159.7 / 94%)0 0) border-box;
   /* extends to outer border edges */
 
   /* a clear border lets the background gradient shine through */
-  border: 2px solid transparent;
+  border: 0px solid transparent;
 
   /* unpause the animation on hover */
   &:hover {
@@ -170,7 +161,7 @@ main {
   left: 95%;
 }
 
-#voltar-ao-topo img{
+#voltar-ao-topo img {
   width: 40px;
 }
 
@@ -274,7 +265,7 @@ h1 {
 }
 
 #contact {
-  background-color: #f2f2f2;
+  background-color: var(--cinza);
   padding: 40px;
   text-align: center;
 }
@@ -287,7 +278,6 @@ h1 {
 #contact form {
   width: 70vw;
   margin: auto;
-  background: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -314,7 +304,7 @@ h1 {
 
 #contact form input[type="submit"] {
   background-color: #0056b3;
-  color: white;
+  color: var(--background-color);
   border: none;
   padding: 15px;
   font-size: 16px;
@@ -362,8 +352,7 @@ footer {
   color: #fff;
 }
 
-.footer-section p
-{
+.footer-section p {
   color: #bbb;
 }
 
@@ -435,7 +424,7 @@ footer {
     max-width: 300px;
   }
 
-  footer{
+  footer {
     flex-flow: column;
   }
 
