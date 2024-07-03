@@ -277,15 +277,17 @@ h1 {
   margin-bottom: 20px;
 }
 
-#contact form {
+#contact-form {
   width: 70vw;
   margin: auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  flex-flow: column;
 }
 
-#contact form label {
+#contact-form label {
   display: block;
   text-align: left;
   margin: 10px 0 5px;
@@ -293,8 +295,8 @@ h1 {
   color: #555;
 }
 
-#contact form input,
-#contact form textarea {
+#contact-form input,
+#contact-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -304,7 +306,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-#contact form input[type="submit"] {
+#contact-form input[type="submit"] {
   background-color: #0056b3;
   color: var(--background-color);
   border: none;
@@ -313,6 +315,21 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
+}
+
+#contact-form #nome,
+#contact-form #email {
+  width: 400px;
+}
+
+#contact-form #mensagem {
+  height: 200px;
+  width: 80%;
+}
+
+#contact-form #contact-button-submit {
+  width: 200px;
+  justify-self: right;
 }
 
 #contact form input[type="submit"]:hover {
@@ -380,12 +397,29 @@ footer {
 }
 
 @media (max-width: 600px) {
+  #header {
+    overflow: visible;
+  }
+
+  #container-menu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: end;
+    height: 80%;
+    width: 100px;
+  }
+
   #navbar ul li a {
     font-size: 12px;
+    color: #0f0f0f;
   }
 
   .menu-hamburguer {
     display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
   }
 
   #navbar {
@@ -393,7 +427,16 @@ footer {
   }
 
   #navbar.expandido {
-    display: block;
+    display: flex;
+    position: relative;
+  }
+
+  #container-menu ul{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    right: -50%;
+    margin-top: 7px;
   }
 
 
@@ -426,6 +469,13 @@ footer {
 
   .project {
     max-width: 300px;
+  }
+
+
+  #contact-form #nome,
+  #contact-form #email,
+  #contact-form #mensagem {
+    width: 100%;
   }
 
   footer {
