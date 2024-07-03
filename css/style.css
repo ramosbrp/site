@@ -28,10 +28,11 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: 0;
 }
 
 header {
+  position: fixed;
   width: 100vw;
   height: 64px;
   display: flex;
@@ -119,6 +120,8 @@ header h2 {
 }
 
 main {
+  padding-top: 64px;
+  padding-bottom: 58px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -157,7 +160,7 @@ main {
 
 #voltar-ao-topo {
   position: fixed;
-  top: 92%;
+  top: 89%;
   left: 95%;
 }
 
@@ -169,7 +172,6 @@ main {
   width: 40vw;
   display: flex;
   flex-flow: column;
-  /* background-color: var(--background-claro); */
 }
 
 
@@ -318,6 +320,8 @@ h1 {
 }
 
 footer {
+  width: 100vw;
+  position: fixed;
   bottom: 0;
   background-color: #333;
   color: #fff;
@@ -394,8 +398,8 @@ footer {
 
 
   #voltar-ao-topo {
-    top: 88%;
-    left: 83%;
+    top: 82%;
+    left: 90%;
   }
 
   #voltar-ao-topo img {
