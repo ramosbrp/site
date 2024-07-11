@@ -21,14 +21,13 @@ html[data-theme="light"] {
 
 
 
-body {
+html, body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   width: 100vw;
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 header {
@@ -336,59 +335,27 @@ h1 {
   background-color: #003d7a;
 }
 
-footer {
-  width: 100vw;
-  position: fixed;
+
+
+/* FOOTER */
+#footer{
+  background-color: var(--background-color);
+  z-index: 2;
   bottom: 0;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
+  position: fixed;
+  width: 100vw;
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  border-top: 1px solid #ccc;
 }
-
-.footer-top {
-  display: flex;
-  flex-flow: column;
-  border-bottom: 1px solid #777;
-  align-items: center;
-  justify-content: center;
-  line-height: 12px;
-  font-size: 12px;
-}
-
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-}
-
-
-.footer-section h3 {
-  color: #fff;
-}
-
-.footer-section p {
-  color: #bbb;
-}
-
-.social-media {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  width: 150px;
-
-}
-
-.social-media a img {
-  width: 1.5rem;
-}
-
+  .footer-container-list a{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 @media (max-width: 768px) {
   .footer-content {
@@ -410,27 +377,7 @@ footer {
     width: 100px;
   }
 
-  #navbar ul li a {
-    font-size: 12px;
-    color: #0f0f0f;
-  }
-
-  .menu-hamburguer {
-    display: block;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-  }
-
-  #navbar {
-    display: none;
-  }
-
-  #navbar.expandido {
-    display: flex;
-    position: relative;
-  }
-
+ 
   #container-menu ul{
     position: absolute;
     display: flex;
@@ -478,23 +425,18 @@ footer {
     width: 100%;
   }
 
-  footer {
-    flex-flow: column;
+  #footer{
+    height: 6vh;
   }
 
-  footer .footer-content {
-    display: flex;
-    flex-flow: row;
-  }
+    #footer .footer-container-list span{
+      font-size: 10px;
+    }
 
-  footer .social-media {
-    flex-flow: column;
-    justify-content: center;
-    max-width: 15vw;
-  }
+ 
 
   footer img {
-    max-width: 5vw;
+    max-width: 5vw; 
   }
 }
 
