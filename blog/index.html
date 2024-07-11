@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -28,32 +28,40 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2GLH47DT1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-M2GLH47DT1');
+    gtag('config', 'G-M2GLH47DT1');
 </script>
 
 <body>
     <header id="header">
-        <div>
-            <a href="/">
-                <img id="logo" src="../images/logo.png" alt="">
-            </a>
-            <div>
-                <h2>Blog Ramos Dev</h2>
+        <div id="container-profile">
+
+            <div class="header-container-list">
+                <a href="https://github.com/ramosbrp" tagert="_blank">
+                    <!-- <img src="../images/icons8-github-logo-24.png" alt="gitHub"> -->
+                    <span id="github-link">gitHub</span>
+
+                </a>
+            </div>
+            <div class="header-container-list">
+                <a href="https://www.linkedin.com/in/ramos-bruno/" target="_blank" >
+                    <!-- <img src="../images/icons8-linkedin-30.png" alt="linkedIn"> -->
+                    <span id="linkedin-link">linkedIn</span>
+                </a>
             </div>
         </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <!-- <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a href="#projects">Projetos</a></li> -->
-            </ul>
-        </nav>
+
+        <div id="container-menu">
+            <!-- Ícone do Menu Hambúrguer -->
+            <button class="menu-hamburguer" onclick="toggleMenu()">☰</button>
+
+
+        </div>
     </header>
+
     <div id="voltar-ao-topo">
         <a href="#header">
             <img src="../images/voltar-ao-topo.png" alt="">
@@ -72,28 +80,42 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h3>Contato</h3>
-                <p><i class="fas fa-phone"></i> (21) 98914-0246</p>
-                <p><i class="fas fa-envelope"></i>contato@ramos-dev.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-            </div>
-            <div class="footer-section social-media">
-                <a href="https://github.com/ramosbrp"><img src="../images/github-2.png" alt=""> GitHub</a>
-                <a href="https://wa.me/+5521989140246"><img src="../images/whatsapp-2.png" alt=""> WhatsApp</a>
-                <a href="https://www.linkedin.com/in/ramos-bruno/"><img src="../images/linkedin.png" alt="">Linkedin</a>
-            </div>
-            <div class="footer-section map">
-                <!-- Incorporar mapa (use Google Maps ou similar) -->
-                <!-- Exemplo: <iframe src="URL_DO_MAPA" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-            </div>
+    <footer id="footer">
+
+        <div class="footer-container-list">
+            <a href="../index.html">
+                <img src="../images/icons8-casa-50-black.png" alt="início">
+                <span>inicio</span>
+            </a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Ramos Dev | Todos os Direitos Reservados</p>
-            <p>Desenvolvido com <i class="fas fa-heart"></i> e um pouco de café!</p>
+        <div class="footer-container-list">
+            <a href="#projects">
+                <img src="../images/icons8-física-64.png" alt="lab">
+                <span>lab</span>
+            </a>
         </div>
+        <div class="footer-container-list">
+            <a href="#projects">
+                <img src="../images/email-2.png" alt="contato">
+                <span>contato</span>
+            </a>
+        </div>
+        <div class="footer-container-list">
+            <a href="#about">
+                <img src="../images/icons8-sobre-64-black.png" alt="">
+                <span>sobre</span>
+            </a>
+        </div>
+        <div class="footer-container-list">
+            <a href="./blog">
+                <img src="../images/icons8-blog-64-black.png" alt="">
+                <span>blog</span>
+            </a>
+        </div>
+
+
+
+
     </footer>
 
     <script src="../js/blog.js"></script>

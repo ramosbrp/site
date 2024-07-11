@@ -12,12 +12,6 @@ body {
     flex-flow: column;
 }
 
-/* header, footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-} */
 
 .blog-list {
     width: 80%;
@@ -86,4 +80,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Adicione mais estilos conforme necessário */
+#footer .footer-container-list:nth-child(5) a{
+    filter: none;
+    font-weight: bold   ;
+}

@@ -7,7 +7,8 @@
 }
 
 html[data-theme="light"] {
-  --background-color: #f9f9f9;
+  --background-color: #fff;
+  --main-background-color: #f9f9f9;
   /* Fundo geral da aplicação */
   --header-background-color: #0f0f0f;
   /* Fundo do cabeçalho */
@@ -15,13 +16,16 @@ html[data-theme="light"] {
   --laranja: #ff5b00;
   --laranja-claro: #ff9700;
   --cinza: #eee;
+  --texto-cinza: #888686;
+  --azul-linkedin: #0a66c2;
 
 }
 
 
 
 
-html, body {
+html,
+body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
@@ -30,70 +34,51 @@ html, body {
   flex-direction: column;
 }
 
-header {
+#header, #footer{
   position: fixed;
   width: 100vw;
-  height: 64px;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+header {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--header-background-color);
+  background-color: var(--background-color);
   color: var(--header-text-color);
+  border-bottom: 1px solid #ccc;
+}
+
+#header .header-container-list a {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-cinza);
+}
+
+#header #github-link {
+  color: #5355ce;
+  font-weight: bold;
+  /* Roxo padrão do GitHub */
+}
+
+
+#header #linkedin-link {
+  color: var(--azul-linkedin);
+  font-weight: bold;
 }
 
 #container-profile {
-  width: 140px;
-}
-
-
-
-#container-profile,
-#container-profile a {
+  width: 300px;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  color: var(--header-text-color);
+
 }
-
-
-.profile-pic {
-  border-radius: 60%;
-  max-width: 59px;
-  max-height: 59px;
-  height: auto;
-  /* add the animation, but pause it by default */
-  animation: spin 2.5s infinite linear paused;
-
-  /**
-   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
-   * @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
-   */
-  background:
-    /* Background colors don’t work with background-origin, so use a gradient. */
-    linear-gradient(to bottom,
-      oklch(55.64% 0.112 159.7 / 94%),
-      oklch(55.64% 0.112 159.7 / 94%)) padding-box,
-    /* ends at inner border edges */
-    conic-gradient(from var(--bg-angle) in oklch longer hue,
-      oklch(55.64% 0.112 159.7 / 94%)0 0) border-box;
-  /* extends to outer border edges */
-
-  /* a clear border lets the background gradient shine through */
-  border: 0px solid transparent;
-
-  /* unpause the animation on hover */
-  &:hover {
-    animation-play-state: running;
-  }
-}
-
-header h2 {
-  font-size: 14px;
-}
-
-
 
 #navbar ul {
   list-style-type: none;
@@ -119,6 +104,7 @@ header h2 {
 }
 
 main {
+  background-color: var(--main-background-color);
   padding-top: 64px;
   padding-bottom: 58px;
   display: flex;
@@ -128,9 +114,12 @@ main {
 
 }
 
-#contact,
 #projects {
-  height: 100vh;
+  width: 60vw;
+}
+
+#contact{
+  width: 40vw;
 }
 
 /**
@@ -159,7 +148,7 @@ main {
 
 #voltar-ao-topo {
   position: fixed;
-  top: 89%;
+  top: 86%;
   left: 95%;
 }
 
@@ -248,7 +237,6 @@ h1 {
   margin: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 400px;
 }
 
 .project img {
@@ -277,7 +265,6 @@ h1 {
 }
 
 #contact-form {
-  width: 70vw;
   margin: auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -323,7 +310,7 @@ h1 {
 
 #contact-form #mensagem {
   height: 200px;
-  width: 80%;
+  width: 90%;
 }
 
 #contact-form #contact-button-submit {
@@ -338,24 +325,35 @@ h1 {
 
 
 /* FOOTER */
-#footer{
+#footer {
   background-color: var(--background-color);
-  z-index: 2;
   bottom: 0;
-  position: fixed;
-  width: 100vw;
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
   align-items: center;
   border-top: 1px solid #ccc;
+  color: #ccc;
 }
-  .footer-container-list a{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-  }
+
+#footer img {
+  width: 2vw;
+}
+#footer .footer-container-list a{
+    filter:contrast(30%);
+    color: black;
+}
+
+
+
+.footer-container-list a {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--texto-cinza);
+}
 
 @media (max-width: 768px) {
   .footer-content {
@@ -377,8 +375,8 @@ h1 {
     width: 100px;
   }
 
- 
-  #container-menu ul{
+
+  #container-menu ul {
     position: absolute;
     display: flex;
     flex-flow: column;
@@ -388,25 +386,22 @@ h1 {
 
 
   #voltar-ao-topo {
-    top: 82%;
-    left: 90%;
+    width: 50px;
+    top: 90%;
+    left: 82%;
   }
 
   #voltar-ao-topo img {
     width: 70%;
   }
 
-  #about {
+  main{
+    /* display: block; */
+  }
+
+
+  #about, #projects, #contact {
     width: 90vw;
-  }
-
-
-  #about .profile-pic {
-    width: 50vw;
-  }
-
-  #projects {
-    height: 100%;
   }
 
   .project-container {
@@ -414,30 +409,27 @@ h1 {
     flex-flow: column;
   }
 
-  .project {
-    max-width: 300px;
-  }
-
-
   #contact-form #nome,
   #contact-form #email,
   #contact-form #mensagem {
     width: 100%;
   }
 
-  #footer{
+  #footer {
     height: 6vh;
   }
 
-    #footer .footer-container-list span{
-      font-size: 10px;
-    }
-
- 
-
-  footer img {
-    max-width: 5vw; 
+  #footer img {
+    width: 5vw;
   }
+
+  #footer .footer-container-list span {
+    font-size: 10px;
+  }
+
+
+
+
 }
 
 #notificacao {
