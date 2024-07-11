@@ -21,14 +21,13 @@ html[data-theme="light"] {
 
 
 
-body {
+html, body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   width: 100vw;
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 header {
@@ -340,10 +339,10 @@ h1 {
 
 /* FOOTER */
 #footer{
-  color: var(--background-color);
+  background-color: var(--background-color);
   z-index: 2;
-  position: fixed;
   bottom: 0;
+  position: fixed;
   width: 100vw;
   display: flex;
   flex-flow: row;
@@ -426,23 +425,18 @@ h1 {
     width: 100%;
   }
 
-  footer {
-    flex-flow: column;
+  #footer{
+    height: 6vh;
   }
 
-  footer .footer-content {
-    display: flex;
-    flex-flow: row;
-  }
+    #footer .footer-container-list span{
+      font-size: 10px;
+    }
 
-  footer .social-media {
-    flex-flow: column;
-    justify-content: center;
-    max-width: 15vw;
-  }
+ 
 
   footer img {
-    max-width: 5vw;
+    max-width: 5vw; 
   }
 }
 
