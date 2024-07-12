@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+#projects .intro p{
+    text-align: left;
+}
+
 .github-button {
     display: inline-flex;
     align-items: center;
@@ -24,3 +28,4 @@
 .github-button:hover {
     background-color: #444d56;
 }
+
