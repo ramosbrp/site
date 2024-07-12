@@ -7,16 +7,14 @@
 }
 
 html[data-theme="light"] {
-  --background-color: #fff;
-  --main-background-color: #f9f9f9;
-  /* Fundo geral da aplicação */
-  --header-background-color: #0f0f0f;
-  /* Fundo do cabeçalho */
+ 
+  --background-color: #fff;  /* Fundo geral da aplicação */  
+  --main-background-color: #f9f9f9; /* Fundo main */
   --header-text-color: #d8d8d8;
   --laranja: #ff5b00;
   --laranja-claro: #ff9700;
   --cinza: #eee;
-  --texto-cinza: #888686;
+  --texto-cinza: #888686; /*Texto cinza */
   --azul-linkedin: #0a66c2;
 
 }
@@ -26,9 +24,7 @@ html[data-theme="light"] {
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif !important;  
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -39,16 +35,17 @@ body {
   width: 100vw;
   z-index: 1000;
   padding: 10px 0;
+  background-color: var(--background-color) !important  ;
 }
 
-header {
+#header {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--background-color);
   color: var(--header-text-color);
   border-bottom: 1px solid #ccc;
+  height: 4vh;
 }
 
 #header .header-container-list a {
@@ -80,37 +77,15 @@ header {
 
 }
 
-#navbar ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-#navbar ul li {
-  display: inline;
-  margin: 0 10px;
-  max-width: 14px;
-}
-
-#navbar ul li a {
-  text-decoration: none;
-  color: var(--header-text-color);
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-}
-
-.menu-hamburguer {
-  display: none;
-}
-
 main {
   background-color: var(--main-background-color);
-  padding-top: 64px;
-  padding-bottom: 58px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  margin-top: 4vh;
+  margin-bottom: 7vh;
 
 }
 
@@ -152,9 +127,9 @@ main {
   left: 95%;
 }
 
-#voltar-ao-topo img {
-  width: 40px;
-}
+  #voltar-ao-topo img {
+    width: 40px;
+  }
 
 #about {
   width: 40vw;
@@ -172,7 +147,7 @@ h1 {
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
 }
 
 
@@ -192,7 +167,6 @@ h1 {
 
 #about #skills div {
   display: flex;
-  /* flex-flow: row; */
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
@@ -200,12 +174,9 @@ h1 {
 }
 
 #skills #skills-icon {
-  /* width: 40px; */
   display: flex;
   flex-flow: column;
   align-items: center;
-  /* background-color: var(--background-escuro); */
-  /* border: 1px solid var(--azul-royal); */
   padding: 5px;
 }
 
@@ -218,11 +189,8 @@ h1 {
 }
 
 #projects {
-
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding: 50px;
-  margin-top: 200px;
   text-decoration: none;
 }
 
@@ -300,7 +268,7 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: var(--background-color) 0.3s;
 }
 
 #contact-form #nome,
@@ -326,7 +294,6 @@ h1 {
 
 /* FOOTER */
 #footer {
-  background-color: var(--background-color);
   bottom: 0;
   display: flex;
   flex-flow: row;
@@ -334,6 +301,7 @@ h1 {
   align-items: center;
   border-top: 1px solid #ccc;
   color: #ccc;
+  height: 7vh;
 }
 
 #footer img {
@@ -366,23 +334,7 @@ h1 {
     overflow: visible;
   }
 
-  #container-menu {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: end;
-    height: 80%;
-    width: 100px;
-  }
-
-
-  #container-menu ul {
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    right: -50%;
-    margin-top: 7px;
-  }
+  
 
 
   #voltar-ao-topo {
@@ -394,11 +346,6 @@ h1 {
   #voltar-ao-topo img {
     width: 70%;
   }
-
-  main{
-    /* display: block; */
-  }
-
 
   #about, #projects, #contact {
     width: 90vw;

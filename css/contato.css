@@ -1,0 +1,4 @@
+#footer .footer-container-list:nth-child(3) a{
+    filter: none;
+    font-weight: bold;
+}
