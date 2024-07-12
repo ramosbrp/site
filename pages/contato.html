@@ -7,7 +7,7 @@
     <title>Blog | Ramos Dev</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/contato.css">
     <link rel="icon" href="../assets/favicon_io/favicon.ico">
 
     <!-- FONTS -->
@@ -39,70 +39,75 @@
     <header id="header">
         <div id="container-profile">
 
+
             <div class="header-container-list">
-                <a href="https://github.com/ramosbrp" tagert="_blank">
-                    <!-- <img src="../images/icons8-github-logo-24.png" alt="gitHub"> -->
+                <a href="https://github.com/ramosbrp" tagert="blank">
+                    <!-- <img src="./images/icons8-github-logo-24.png" alt="gitHub"> -->
                     <span id="github-link">gitHub</span>
 
                 </a>
             </div>
             <div class="header-container-list">
-                <a href="https://www.linkedin.com/in/ramos-bruno/" target="_blank" >
-                    <!-- <img src="../images/icons8-linkedin-30.png" alt="linkedIn"> -->
+                <a href="https://www.linkedin.com/in/ramos-bruno/">
+                    <!-- <img src="./images/icons8-linkedin-30.png" alt="linkedIn"> -->
                     <span id="linkedin-link">linkedIn</span>
                 </a>
             </div>
         </div>
 
-        
-    </header>
 
+    </header>
     <div id="voltar-ao-topo">
-        <a href="#header">
+        <a href="#">
             <img src="../images/voltar-ao-topo.png" alt="">
         </a>
     </div>
-
     <main>
-        <section class="blog-list">
-            <article class="blog-post">
-                <h2>A Evolução da Plataforma .NET: Entendendo as Diferenças e as Novas Direções</h2>
-                <p class="post-date">22/03/2024</p>
-                <p>Resumo ou introdução do post...</p>
-                <a href="./posts/A Evolucao da Plataforma .NET.html" class="read-more">Leia mais</a>
-            </article>
-            <!-- Outros posts serão adicionados aqui -->
+        <section id="contact">
+            <h1>Contato</h1>
+            <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
+            <form action="" method="post" id="contact-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea><br>
+                <div>
+                    <input type="submit" id="contact-button-submit" value="Enviar">
+                </div>
+            </form>
         </section>
     </main>
 
     <footer id="footer">
 
         <div class="footer-container-list">
-            <a href="../index.html">
+            <a href="../">
                 <img src="../images/icons8-casa-50-black.png" alt="início">
                 <span>inicio</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="../pages/projetos.html">
+            <a href="./projetos.html">
                 <img src="../images/icons8-física-64.png" alt="lab">
                 <span>lab</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="../pages/contato.html">
-                <img src="../images/email-2.png" alt="contato">
+            <a href="./">
+                <img src="../images/email-2.png" alt="lab">
                 <span>contato</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="../pages/sobre.html">
+            <a href="./sobre.html">
                 <img src="../images/icons8-sobre-64-black.png" alt="">
                 <span>sobre</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="./blog">
+            <a href="../blog">
                 <img src="../images/icons8-blog-64-black.png" alt="">
                 <span>blog</span>
             </a>
@@ -112,8 +117,6 @@
 
 
     </footer>
-
-    <script src="../js/blog.js"></script>
 </body>
 
 </html>
