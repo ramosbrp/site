@@ -26,7 +26,6 @@ html[data-theme="light"] {
 
 html,
 body {
-  font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   width: 100vw;
