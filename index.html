@@ -36,6 +36,7 @@
 </script>
 
 <body>
+    <script src="./js/script.js"></script>
     <header id="header">
         <div id="container-profile">
 
@@ -55,176 +56,55 @@
             </div>
         </div>
 
-        
+
     </header>
     <div id="voltar-ao-topo">
         <a href="#">
             <img src="./images/voltar-ao-topo.png" alt="">
         </a>
     </div>
-
     <main>
-        <section id="about">
-
-            <div id="bruno-ramos">
-                <p>
-                <h1>Olá!</h1>
-                </p>
-                <br>
-                <em>
-                    <p>
-                        Meu nome é Bruno Ramos sou desenvolvedor desde 2020, com uma paixão profunda por
-                        desenvolvimento open source. Acredito firmemente no poder transformador da educação e do
-                        conhecimento. <br><br>
-
-                        Atualmente, estou focado em diversos projetos pessoais que me permitem explorar e aprimorar
-                        minhas habilidades em tecnologias de nuvem, como Azure, e em gerenciamento de banco de dados.
-                        Sempre em busca de novas oportunidades e desafios. <br><br>
-
-                        Minha jornada na programação começou com o desejo de construir soluções eficientes e inovadoras.
-                        Desde então, tenho trabalhado com uma variedade de tecnologias, contribuindo para projetos que
-                        impactam positivamente a experiência do usuário e a performance das aplicações.
-
-                        </br><br>
-
-
-
-                    </p>
-                </em>
-
-                <br>
-
-            </div>
-            <div id="skills">
-
-                <p>
-                    Minhas skills:
-                </p>
-                <div>
-                    <div id="skills-icon">
-                        <img src="./images/git.png" alt="csharp">
-                        <span>Git</span>
-                    </div>
-                    <div id="skills-icon">
-                        <img src="./images/csharp.png" alt="c#">
-                        <span>C#</span>
-                    </div>
-                    <div id="skills-icon">
-                        <img src="./images/linux.png" alt="linux">
-                        <span>Linux</span>
-                    </div>
-                    <div id="skills-icon">
-                        <img src="./images/javascript.png" alt="javascript">
-                        <span>javascript</span>
-                    </div>
-
-                    <div id="skills-icon">
-                        <img src="./images/banco-de-dados.png" alt="sql">
-                        <span>Sql</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="projects">
-            <h1>Projetos</h1>
-            <div class="project-container">
-                <!-- Projeto 1 -->
-                <div class="project">
-                    <img src="./images/SoftSkillsUp.jpg" alt="Projeto 1">
-                    <h3>Soft Skills Up</h3>
-                    <p>Plataforma de treinamento de soft skills.</p>
-                    <a href="https://softskillsup-app.azurewebsites.net" target="_blank">Ver Projeto</a>
-                </div>
-
-                <div class="project">
-                    <img src="images/MyUniversity2.jpg" alt="Projeto 2">
-                    <h3>My University App</h3>
-                    <p>Um sistema de gerenciamento de pessoas para faculdade</p>
-                    <a href="https://myuniversity-app.azurewebsites.net" target="_blank">Ver Projeto</a>
-                </div>
-
-
-                <div class="project">
-                    <img src="images/quick-cloth.jpg" alt="Projeto 3">
-                    <h3>Quick Cloth</h3>
-                    <p>Uma loja virtual de roupas</p>
-                    <a href="https://serene-daifuku-e56111.netlify.app/" target="_blank">Ver Projeto</a>
-                </div>
-
-
-
-
-                <div class="project">
-                    <img src="images/Site_I2tech.png" alt="Projeto 4">
-                    <h3>Site I2Tech</h3>
-                    <p>Site para I2Tech</p>
-                    <a href="https://agitated-mcclintock-0c01e5.netlify.app/" target="_blank">Ver Projeto</a>
-                </div>
-
-            </div>
-            <!-- Informações de contato -->
-        </section>
-
-        <section id="contact">
-            <h1>Contato</h1>
-            <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
-            <form action="" method="post" id="contact-form">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea><br>
-                <div>
-                    <input type="submit" id="contact-button-submit" value="Enviar">
-                </div>
-            </form>
-        </section>
+        <div id="app">
+        </div>
     </main>
 
     <footer id="footer">
 
         <div class="footer-container-list">
-            <a href="#/">
+            <a href="#" class="link" id data-link="/">
                 <img src="./images/icons8-casa-50-black.png" alt="início">
                 <span>inicio</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="./pages/projetos.html">
+            <a href="#" class="link" data-link='/projetos' >
                 <img src="./images/icons8-física-64.png" alt="lab">
                 <span>lab</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="./pages/contato.html">
+            <a href="#" class="link" data-link="/contato">
                 <img src="./images/email-2.png" alt="lab">
                 <span>contato</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="./pages/sobre.html">
+            <a href="#" class="link" data-link="/sobre" >
                 <img src="./images/icons8-sobre-64-black.png" alt="">
                 <span>sobre</span>
             </a>
         </div>
         <div class="footer-container-list">
-            <a href="./blog">
+            <a href="#" class="link" data-link="blog" >
                 <img src="./images/icons8-blog-64-black.png" alt="">
                 <span>blog</span>
             </a>
         </div>
 
-
-
-
     </footer>
 
     <div id="notificacao">E-mail enviado com sucesso!</div>
-
-    <script src="./js/script.js"></script>
+    
 </body>
 
 </html>

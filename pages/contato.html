@@ -1,122 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+ <link rel="stylesheet" href="../css/contato.css">
+    
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Ramos Dev</title>
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contato.css">
-    <link rel="icon" href="../assets/favicon_io/favicon.ico">
-
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat&family=Roboto&display=swap"
-        rel="stylesheet">
-
-    <!-- Meta Tags Básicas -->
-    <meta name="keywords"
-        content="ramos-dev, bruno ramos, bruno ramos dev, bruno site, bruno ramos site, bruno ramos website, pagina de bruno ramos, pagina de bruno ramos, bruno portfolio, bruno ramos portfolio" />
-    <meta property="og:title" content="Ramos Dev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ramos-dev.com" />
-    <meta property="og:image" content="https://ramos-dev.com/images/logo.png" />
-    <meta property="og:description" content="Procurando" />
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M2GLH47DT1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-M2GLH47DT1');
-</script>
-
-<body>
-    <header id="header">
-        <div id="container-profile">
-
-
-            <div class="header-container-list">
-                <a href="https://github.com/ramosbrp" tagert="blank">
-                    <!-- <img src="./images/icons8-github-logo-24.png" alt="gitHub"> -->
-                    <span id="github-link">gitHub</span>
-
-                </a>
+<div id="voltar-ao-topo">
+    <a href="#">
+        <img src="../images/voltar-ao-topo.png" alt="">
+    </a>
+</div>  
+<main>
+    <section id="contact">
+        <h1>Contato</h1>
+        <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
+        <form action="" method="post" id="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea><br>
+            <div>
+                <input type="submit" id="contact-button-submit" value="Enviar">
             </div>
-            <div class="header-container-list">
-                <a href="https://www.linkedin.com/in/ramos-bruno/">
-                    <!-- <img src="./images/icons8-linkedin-30.png" alt="linkedIn"> -->
-                    <span id="linkedin-link">linkedIn</span>
-                </a>
-            </div>
-        </div>
-
-
-    </header>
-    <div id="voltar-ao-topo">
-        <a href="#">
-            <img src="../images/voltar-ao-topo.png" alt="">
-        </a>
-    </div>
-    <main>
-        <section id="contact">
-            <h1>Contato</h1>
-            <p>Para mais informações, dúvidas ou orçamentos, entre em contato:</p>
-            <form action="" method="post" id="contact-form">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea><br>
-                <div>
-                    <input type="submit" id="contact-button-submit" value="Enviar">
-                </div>
-            </form>
-        </section>
-    </main>
-
-    <footer id="footer">
-
-        <div class="footer-container-list">
-            <a href="../">
-                <img src="../images/icons8-casa-50-black.png" alt="início">
-                <span>inicio</span>
-            </a>
-        </div>
-        <div class="footer-container-list">
-            <a href="./projetos.html">
-                <img src="../images/icons8-física-64.png" alt="lab">
-                <span>lab</span>
-            </a>
-        </div>
-        <div class="footer-container-list">
-            <a href="./">
-                <img src="../images/email-2.png" alt="lab">
-                <span>contato</span>
-            </a>
-        </div>
-        <div class="footer-container-list">
-            <a href="./sobre.html">
-                <img src="../images/icons8-sobre-64-black.png" alt="">
-                <span>sobre</span>
-            </a>
-        </div>
-        <div class="footer-container-list">
-            <a href="../blog">
-                <img src="../images/icons8-blog-64-black.png" alt="">
-                <span>blog</span>
-            </a>
-        </div>
+        </form>
+    </section>
+</main>
 
 
 
-
-    </footer>
-</body>
-
-</html>
+<script src="../js/contato.js"></script>

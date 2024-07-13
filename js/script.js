@@ -1,46 +1,89 @@
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM fully loaded and parsed");
 
-    var data = {
-        name: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('mensagem').value
-    }
+    const navigateTo = (url) => {
+        console.log("Navigating to:", url);  // Adicionado console.log
+        history.pushState(null, null, url);
+        router();
+    };
 
-    try {
-        const response = await fetch('https://backend-site-98a38bb92184.herokuapp.com/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
+    const router = async () => {
+        console.log("Router function called");
 
-        // const responseData = await response.json();
-        console.log('Success: ', response.statusText);
+        const routes = [
+            { path: "/", view: () => "pages/home.html" },
+            { path: "/sobre", view: () => "pages/sobre.html" },
+            { path: "/projetos", view: () => "pages/projetos.html" },
+            { path: "/contato", view: () => "pages/contato.html" },
+            { path: "/blog", view: () => "blog/" }
+        ];
 
-        // Exibe a notificação
-        const notificacao = document.getElementById('notificacao');
-        notificacao.style.display = 'block';
+        // Verifica a rota atual
+        const potentialMatches = routes.map(route => {
+            return {
+                route: route,
+                isMatch: location.pathname === route.path
+            };
+        });
 
-        // Aguarda 3 segundos e oculta a notificação
-        setTimeout(() => {
-            notificacao.style.display = 'none';
-        }, 3000);
+        console.log("Potential matches:", potentialMatches);
 
-        document.getElementById('nome').value = "";
-        document.getElementById('email').value = "";
-        document.getElementById('mensagem').value = "";
+        // Verifica se há uma correspondência exata
+        let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
 
-    } catch (error) {
-        console.error('Error: ', error);
-    }
+        // Se não houver correspondência exata, define a rota padrão
+        if (!match) {
+            match = {
+                route: routes[0],
+                isMatch: true
+            };
+        }
 
-})
+        console.log("Match found:", match);
 
-function toggleMenu() {
-    const menu = document.getElementById('navbar');
-    if (menu.classList.contains('expandido')) {
-        menu.classList.remove('expandido');
-    } else {
-        menu.classList.add('expandido');
-    }
-}
+        // Carrega a visualização correspondente
+        try {
+            const html = await fetch(match.route.view()).then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.text();
+            });
+            document.getElementById("app").innerHTML = html;
+            console.log("Loaded view:", match.route.view());
+        } catch (error) {
+            console.error("Error loading view:", error);
+            document.getElementById("app").innerHTML = "<h1>404</h1><p>Página não encontrada</p>";
+        }
+    };
+
+    window.addEventListener("popstate", router);
+
+    // document.body.addEventListener("click", e => {
+    //     console.log("Click detected on body");
+
+    //     if (e.target.matches(".link")) {
+    //         console.log("Element matches [data-link]");
+    //         e.preventDefault();
+    //         const url = e.target.getAttribute("data-link");
+    //         console.log("Link clicked:", url);  // Adicionado console.log
+    //         navigateTo(url);
+    //     } else {
+    //         console.log("Element does not match [data-link]");
+    //     }
+    // });
+
+    document.querySelectorAll(".link").forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            console.log("Click detected on link");
+            // Guardar a rota em algum atributo
+            // Basta somente conseguir pegar um attributo
+            const url = e.target.getAttribute("class");
+            console.log("Link clicked:", url);
+            navigateTo();
+        });
+    });
+
+    router();
+});
