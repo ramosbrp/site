@@ -1,21 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded and parsed");
 
     const navigateTo = (url) => {
-        console.log("Navigating to:", url);  // Adicionado console.log
         history.pushState(null, null, url);
         router();
     };
 
     const router = async () => {
-        console.log("Router function called");
 
         const routes = [
             { path: "/", view: () => "pages/home.html" },
             { path: "/sobre", view: () => "pages/sobre.html" },
             { path: "/projetos", view: () => "pages/projetos.html" },
             { path: "/contato", view: () => "pages/contato.html" },
-            { path: "/blog", view: () => "blog/" }
+            { path: "/blog", view: () => "blog/index.html" }
         ];
 
         // Verifica a rota atual
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         });
 
-        console.log("Potential matches:", potentialMatches);
 
         // Verifica se há uma correspondência exata
         let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
@@ -39,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
 
-        console.log("Match found:", match);
 
         // Carrega a visualização correspondente
         try {
@@ -49,41 +44,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 return res.text();
             });
+            console.log(html);
             document.getElementById("app").innerHTML = html;
-            console.log("Loaded view:", match.route.view());
         } catch (error) {
             console.error("Error loading view:", error);
             document.getElementById("app").innerHTML = "<h1>404</h1><p>Página não encontrada</p>";
         }
     };
 
-    window.addEventListener("popstate", router);
 
-    // document.body.addEventListener("click", e => {
-    //     console.log("Click detected on body");
-
-    //     if (e.target.matches(".link")) {
-    //         console.log("Element matches [data-link]");
-    //         e.preventDefault();
-    //         const url = e.target.getAttribute("data-link");
-    //         console.log("Link clicked:", url);  // Adicionado console.log
-    //         navigateTo(url);
-    //     } else {
-    //         console.log("Element does not match [data-link]");
-    //     }
-    // });
-
-    document.querySelectorAll(".link").forEach(link => {
-        link.addEventListener("click", e => {
+    const links = document.querySelectorAll('a[data-link]');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log("Click detected on link");
-            // Guardar a rota em algum atributo
-            // Basta somente conseguir pegar um attributo
-            const url = e.target.getAttribute("class");
-            console.log("Link clicked:", url);
-            navigateTo();
+            const url = link.getAttribute('data-link');
+            removeClasse(url)
+            navigateTo(url)
         });
     });
 
+    const removeClasse = (url) => {
+        console.log(url)
+        if (url !== "/") {
+            const firstLink = document.querySelector('#footer .footer-container-list:nth-child(1) a');
+            if (firstLink) {
+                firstLink.style.filter = 'contrast(30%)';
+                firstLink.style.fontWeight = '300';
+            }
+        } else {
+            const firstLink = document.querySelector('#footer .footer-container-list:nth-child(1) a');
+            if (firstLink) {
+                firstLink.style.filter = 'none';
+                firstLink.style.fontWeight = 'bold';
+            }
+        }
+    }
+    console.log(window.location.pathname)
+    removeClasse(window.location.pathname);
     router();
 });
