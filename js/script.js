@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         }
 
-
         // Carrega a visualização correspondente
         try {
             const html = await fetch(match.route.view()).then(res => {
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 return res.text();
             });
-            console.log(html);
             document.getElementById("app").innerHTML = html;
         } catch (error) {
             console.error("Error loading view:", error);
@@ -64,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const removeClasse = (url) => {
-        console.log(url)
+        // console.log(url)
         if (url !== "/") {
             const firstLink = document.querySelector('#footer .footer-container-list:nth-child(1) a');
             if (firstLink) {
@@ -79,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-    console.log(window.location.pathname)
+    // console.log(window.location.pathname)
     removeClasse(window.location.pathname);
     router();
 });

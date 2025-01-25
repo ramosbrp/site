@@ -1,20 +1,29 @@
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
+document.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const form = e.target;
+
+    // Verifica se o formulário enviado é o de contato
+    if (form.id === 'contact-form') {
+    }
+
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let message = document.getElementById('message');
+
     var data = {
-        name: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('mensagem').value
+        name: name.value,
+        email: email.value,
+        message: message.value
     }
 
     try {
-        const response = await fetch('https://backend-site-98a38bb92184.herokuapp.com/send-email', {
+        const response = await fetch('http://127.0.0.1:3001/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
 
-        // const responseData = await response.json();
         console.log('Success: ', response.statusText);
 
         // Exibe a notificação
@@ -26,12 +35,14 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
             notificacao.style.display = 'none';
         }, 3000);
 
-        document.getElementById('nome').value = "";
-        document.getElementById('email').value = "";
-        document.getElementById('mensagem').value = "";
+        // Limpa os campo do form
+        name.value = "";
+        email.value = "";
+        message.value = "";
 
     } catch (error) {
         console.error('Error: ', error);
     }
 
 })
+
